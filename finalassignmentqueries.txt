@@ -1,0 +1,259 @@
+
+#Assignment question number 1-Userwise number of movies in a week
+select count(movie_id),user_id,YEAR(FROM_UNIXTIME(time_stamp)),WEEK(FROM_UNIXTIME(time_stamp),1) from ratings GROUP BY user_id,YEAR(FROM_UNIXTIME(time_stamp)) ,WEEK(FROM_UNIXTIME(time_stamp),1);
+#Note : The output was too long so have just displayed part of the output.
++-----------------+---------+---------------------------------+---------------------------------+
+| count(movie_id) | user_id | YEAR(FROM_UNIXTIME(time_stamp)) | WEEK(FROM_UNIXTIME(time_stamp)) |
++-----------------+---------+---------------------------------+---------------------------------+
+|             306 |    4972 |                            2000 |                              27 |
+|             167 |    6040 |                            2000 |                              17 |
+|              58 |    6040 |                            2000 |                              19 |
+|              34 |    6040 |                            2000 |                              24 |
+|               5 |    6040 |                            2000 |                              28 |
+|              11 |    6040 |                            2000 |                              30 |
+|               1 |    6040 |                            2001 |                               9 |
+|              19 |    6040 |                            2001 |                              31 |
+|               1 |    6040 |                            2001 |                              33 |
+
+#Assignment question number 2-Number of movies per genere
+mysql> select movie_genere,count(movie_id) from tb_movie_genere GROUP by movie_genere;
++--------------+-----------------+
+| movie_genere | count(movie_id) |
++--------------+-----------------+
+| Action       |             469 |
+| Adventure    |             268 |
+| Animation    |              94 |
+| Children's   |             237 |
+| Comedy       |            1088 |
+| Crime        |             193 |
+| Documentary  |             111 |
+| Drama        |            1349 |
+| Fantasy      |              61 |
+| Film-Noir    |              41 |
+| Horror       |             308 |
+| Musical      |             108 |
+| Mystery      |             102 |
+| Romance      |             410 |
+| Sci-Fi       |             256 |
+| Thriller     |             473 |
+| War          |             129 |
+| Western      |              64 |
+
+#Assignment question number 3-Number of movies per genere
+mysql> select tb_movie_genere.movie_genere,count(ratings.user_id) from tb_movie_genere,ratings where tb_movie_genere.movie_id=ratings.movie_id group by tb_movie_genere.movie_genere order by count(ratings.user_id) asc;
++--------------+------------------------+
+| movie_genere | count(ratings.user_id) |
++--------------+------------------------+
+| Documentary  |                   7422 |
+| Film-Noir    |                  17666 |
+| Western      |                  19174 |
+| Fantasy      |                  34028 |
+| Animation    |                  37653 |
+| Mystery      |                  39177 |
+| Musical      |                  40303 |
+| War          |                  63794 |
+| Children's   |                  67105 |
+| Horror       |                  72878 |
+| Crime        |                  73115 |
+| Adventure    |                 130240 |
+| Romance      |                 139188 |
+| Sci-Fi       |                 149755 |
+| Thriller     |                 183238 |
+| Action       |                 245826 |
+| Drama        |                 326800 |
+| Comedy       |                 334307 |
++--------------+------------------------+
+
+#Assignment question number 4-Time Interval when the number of movies rated is maximum
+mysql> select weeklyRating.count_rating,(select DATE_ADD(MAKEDATE(weeklyRating.year_rating,2),INTERVAL weeklyRating.week_rating WEEK)) weekStart, (select DATE_ADD(MAKEDATE(weeklyRating.year_rating,8),INTERVAL weeklyRating.week_rating WEEK)) weekEnd from (select count(rating) count_rating,YEAR(FROM_UNIXTIME(time_stamp))   year_rating,WEEK(FROM_UNIXTIME(time_stamp),1) week_rating from ratings GROUP BY YEAR(FROM_UNIXTIME(time_stamp)) ,WEEK(FROM_UNIXTIME(time_stamp),1) order by count(rating) desc limit 1) weeklyRating;
++--------------+------------+------------+
+| count_rating | weekStart  | weekEnd    |
++--------------+------------+------------+
+|       152225 | 2000-11-26 | 2000-12-02 |
++--------------+------------+------------+
+1 row in set (0.82 sec)
+
+#Assignment question number 5-Number of movies per week group by genre sorted by Number of movies
+#Note : The output was too long so have just displayed part of the output.
+mysql> select mg.movie_genere MovieGenere,count(mg.movie_id) MovieCount,YEAR(FROM_UNIXTIME(r.time_stamp)) MovieYear,WEEK(FROM_UNIXTIME(r.time_stamp),1) MovieWeek from ratings r,tb_movie_genere mg where r.movie_id=mg.movie_id GROUP BY YEAR(FROM_UNIXTIME(r.time_stamp)),WEEK(FROM_UNIXTIME(r.time_stamp),1),mg.movie_genere order by YEAR(FROM_UNIXTIME(r.time_stamp)),WEEK(FROM_UNIXTIME(r.time_stamp),1) ;
++-------------+------------+-----------+-----------+
+| MovieGenere | MovieCount | MovieYear | MovieWeek |
++-------------+------------+-----------+-----------+
+| Action      |       3080 |      2000 |        17 |
+| Adventure   |       1804 |      2000 |        17 |
+| Animation   |        402 |      2000 |        17 |
+| Children's  |        778 |      2000 |        17 |
+| Comedy      |       3480 |      2000 |        17 |
+| Crime       |        809 |      2000 |        17 |
+| Documentary |         59 |      2000 |        17 |
+| Drama       |       3757 |      2000 |        17 |
+| Fantasy     |        456 |      2000 |        17 |
+| Film-Noir   |        247 |      2000 |        17 |
+| Horror      |        835 |      2000 |        17 |
+| Musical     |        466 |      2000 |        17 |
+| Mystery     |        448 |      2000 |        17 |
+| Romance     |       1646 |      2000 |        17 |
+| Sci-Fi      |       2088 |      2000 |        17 |
+| Thriller    |       2135 |      2000 |        17 |
+| War         |        728 |      2000 |        17 |
+| Western     |        196 |      2000 |        17 |
+| Action      |       2977 |      2000 |        18 |
+| Adventure   |       1501 |      2000 |        18 |
+| Animation   |        439 |      2000 |        18 |
+| Children's  |        734 |      2000 |        18 |
+| Comedy      |       4071 |      2000 |        18 |
+| Crime       |        949 |      2000 |        18 |
+| Documentary |         59 |      2000 |        18 |
+| Drama       |       4118 |      2000 |        18 |
+| Fantasy     |        422 |      2000 |        18 |
+| Film-Noir   |        254 |      2000 |        18 |
+| Horror      |        957 |      2000 |        18 |
+| Musical     |        555 |      2000 |        18 |
++-------------+------------+-----------+-----------+
+
+#Assignment question number 6-Least Watched movies per week
+mysql> select movie.movie_title,minRatingYear,minRatingWeek,ratings.rating from movie,ratings,(select MIN(rating) minRating,YEAR(FROM_UNIXTIME(time_stamp)) minRatingYear,WEEK(FROM_UNIXTIME(time_stamp)) minRatingWeek from ratings  GROUP BY YEAR(FROM_UNIXTIME(time_stamp)),WEEK(FROM_UNIXTIME(time_stamp))) minRatingQuery where ratings.rating=minRatingQuery.minRating and YEAR(FROM_UNIXTIME(ratings.time_stamp))=minRatingQuery.minRatingYear and WEEK(FROM_UNIXTIME(ratings.time_stamp))=minRatingQuery.minRatingWeek and ratings.movie_id=movie.movie_id limit 50;
+
+ movie_title                                        | minRatingYear | minRatingWeek | rating |
++----------------------------------------------------+---------------+---------------+--------+
+| Get Shorty                                         |          2000 |            53 |      1 |
+| Nurse Betty                                        |          2000 |            53 |      1 |
+| Predator                                           |          2000 |            53 |      1 |
+| Powder                                             |          2000 |            53 |      1 |
+| Forrest Gump                                       |          2000 |            53 |      1 |
+| Naked                                              |          2000 |            53 |      1 |
+| Rock                                               |          2000 |            53 |      1 |
+| Abyss                                              |          2000 |            53 |      1 |
+| Night on Earth                                     |          2000 |            53 |      1 |
+| In the Company of Men                              |          2000 |            53 |      1 |
+| Titanic                                            |          2000 |            53 |      1 |
+| Negotiator                                         |          2000 |            53 |      1 |
+| Henry: Portrait of a Serial Killer                 |          2000 |            53 |      1 |
+| 54                                                 |          2000 |            53 |      1 |
+| Ghostbusters II                                    |          2000 |            53 |      1 |
+| Total Recall                                       |          2000 |            53 |      1 |
+| Falling Down                                       |          2000 |            53 |      1 |
+| End of Days                                        |          2000 |            53 |      1 |
+| Hand That Rocks the Cradle                         |          2000 |            53 |      1 |
+| Rules of Engagement                                |          2000 |            53 |      1 |
+| Shaft                                              |          2000 |            53 |      1 |
+| American Beauty                                    |          2000 |            53 |      1 |
+| Angels and Insects                                 |          2001 |             1 |      1 |
+| Four Weddings and a Funeral                        |          2001 |             1 |      1 |
+| Coneheads                                          |          2001 |             1 |      1 |
+| Home Alone                                         |          2001 |             1 |      1 |
+| Truth About Cats & Dogs                            |          2001 |             1 |      1 |
+| Nutty Professor                                    |          2001 |             1 |      1 |
+| Fly Away Home                                      |          2000 |            53 |      1 |
+| Vegas Vacation                                     |          2001 |             1 |      1 |
+| Face/Off                                           |          2000 |            53 |      1 |
+| Truman Show                                        |          2001 |             1 |      1 |
+| Nutty Professor                                    |          2001 |             1 |      1 |
+| Holy Man                                           |          2001 |             1 |      1 |
+| Breakfast of Champions                             |          2001 |             1 |      1 |
+| Pushing Tin                                        |          2001 |             1 |      1 |
+| Eyes Wide Shut                                     |          2000 |            52 |      1 |
+| Teaching Mrs. Tingle                               |          2001 |             1 |      1 |
+| Fatal Attraction                                   |          2001 |             1 |      1 |
+| Mr. Death: The Rise and Fall of Fred A. Leuchter J |          2001 |             1 |      1 |
+| Hand That Rocks the Cradle                         |          2000 |            53 |      1 |
+| Muppet Movie                                       |          2001 |             1 |      1 |
+| Caddyshack                                         |          2001 |             1 |      1 |
+| Dick Tracy                                         |          2000 |            52 |      1 |
+| Adventures of Buckaroo Bonzai Across the 8th Dimen |          2000 |            52 |      1 |
+| Fargo                                              |          2000 |            52 |      1 |
+| Halloween                                          |          2000 |            52 |      1 |
+| 10 Things I Hate About You                         |          2000 |            52 |      1 |
+| Big Daddy                                          |          2000 |            52 |      1 |
+| Four Weddings and a Funeral                        |          2000 |            52 |      1 |
++----------------------------------------------------+---------------+---------------+--------+
+
+#Assignment question number 7-Movies with ratings group by genre ordered by rating descending
+mysql> SELECT movie_title,tb_movie_genere.movie_genere,rating from ratings,movie,tb_movie_genere  where ratings.movie_id=movie.movie_id and movie.movie_id=tb_movie_genere.movie_id Group by tb_movie_genere.movie_genere,movie_title,rating order by rating desc limit 50;
+ 
+ movie_title                                        | movie_genere | rating |
++----------------------------------------------------+--------------+--------+
+| Teenage Mutant Ninja Turtles II: The Secret of the | Children's   |      5 |
+| Jaws 2                                             | Horror       |      5 |
+| Lady and the Tramp                                 | Musical      |      5 |
+| Wes Craven's New Nightmare                         | Horror       |      5 |
+| King Kong Lives                                    | Action       |      5 |
+| Defending Your Life                                | Comedy       |      5 |
+| Halloween 5: The Revenge of Michael Myers          | Horror       |      5 |
+| Anchors Aweigh                                     | Musical      |      5 |
+| Wrong Man                                          | Film-Noir    |      5 |
+| Small Soldiers                                     | Animation    |      5 |
+| If Lucy Fell                                       | Romance      |      5 |
+| For the Moment                                     | Romance      |      5 |
+| F/X 2                                              | Action       |      5 |
+| Heart and Souls                                    | Comedy       |      5 |
+| Striptease                                         | Crime        |      5 |
+| Georgia                                            | Drama        |      5 |
+| Sphere                                             | Adventure    |      5 |
+| Jackie Brown                                       | Drama        |      5 |
+| Defending Your Life                                | Romance      |      5 |
+| Scream 3                                           | Mystery      |      5 |
+| Amateur                                            | Drama        |      5 |
+| Firm                                               | Drama        |      5 |
+| Mission to Mars                                    | Sci-Fi       |      5 |
+| Love's Labour's Lost                               | Romance      |      5 |
+| General's Daughter                                 | Drama        |      5 |
+| Things Change                                      | Comedy       |      5 |
+| I'm the One That I Want                            | Comedy       |      5 |
+| Blue Lagoon                                        | Romance      |      5 |
+| Around the World in 80 Days                        | Comedy       |      5 |
+| War Room                                           | Documentary  |      5 |
+| Contender                                          | Thriller     |      5 |
+| Congo                                              | Action       |      5 |
+| Delicatessen                                       | Comedy       |      5 |
+| Beauty and the Beast                               | Musical      |      5 |
+| Star Trek: Generations                             | Sci-Fi       |      5 |
+| Hook                                               | Fantasy      |      5 |
+| Beneath the Planet of the Apes                     | Action       |      5 |
+| Breathless                                         | Action       |      5 |
+| American Graffiti                                  | Drama        |      5 |
+| Mystery Train                                      | Drama        |      5 |
+| Prince of the City                                 | Drama        |      5 |
+| Problem Child 2                                    | Comedy       |      5 |
+| Nutty Professor                                    | Comedy       |      5 |
+| Notorious                                          | Romance      |      5 |
+| Titanic                                            | Action       |      5 |
+| Tigerland                                          | Drama        |      5 |
+| Edward Scissorhands                                | Drama        |      5 |
+| Wisdom                                             | Crime        |      5 |
+| Contact                                            | Drama        |      5 |
+| Young Guns II                                      | Western      |      5 |
++----------------------------------------------------+--------------+--------+
+
+
+8.Highest and lowest watched movies witin a date range.
+
+mysql> (SELECT movie_title,count(rating),rating from ratings,movie  where ratings.movie_id=movie.movie_id and rating=5 and FROM_UNIXTIME(time_stamp,"%Y-%m-%d")>STR_TO_DATE('2000-12-31', '%Y-%m-%d') and  FROM_UNIXTIME(time_stamp,"%Y-%m-%d")<STR_TO_DATE('2002-01-01', '%Y-%m-%d') Group by movie_title,rating order by count(rating) desc limit 1)  Union (SELECT movie_title,count(rating),rating from ratings,movie  where ratings.movie_id=movie.movie_id and rating=1 and FROM_UNIXTIME(time_stamp,"%Y-%m-%d")>STR_TO_DATE('2000-12-31', '%Y-%m-%d') and  FROM_UNIXTIME(time_stamp,"%Y-%m-%d")<STR_TO_DATE('2002-01-01', '%Y-%m-%d') Group by movie_title,rating order by count(rating) asc limit 1);
+
++---------------+---------------+--------+
+| movie_title   | count(rating) | rating |
+
++---------------+---------------+--------+
+| Almost Famous |            95 |      5 |
+| Boys          |             1 |      1 |
++---------------+---------------+--------+
+2 rows in set (0.89 sec)
+
+9. Top five and bottom five movie rating within a date range
+mysql> (SELECT movie_title,count(rating),rating from ratings,movie  where ratings.movie_id=movie.movie_id and rating=5 and FROM_UNIXTIME(time_stamp,"%Y-%m-%d")>STR_TO_DATE('2000-12-31', '%Y-%m-%d') and  FROM_UNIXTIME(time_stamp,"%Y-%m-%d")<STR_TO_DATE('2002-01-01', '%Y-%m-%d') Group by movie_title,rating order by count(rating) desc limit 5)  Union (SELECT movie_title,count(rating),rating from ratings,movie  where ratings.movie_id=movie.movie_id and rating=1 and FROM_UNIXTIME(time_stamp,"%Y-%m-%d")>STR_TO_DATE('2000-12-31', '%Y-%m-%d') and  FROM_UNIXTIME(time_stamp,"%Y-%m-%d")<STR_TO_DATE('2002-01-01', '%Y-%m-%d') Group by movie_title,rating order by count(rating) asc limit 5)
+   
++------------------------------------+---------------+--------+
+| movie_title                        | count(rating) | rating |
++------------------------------------+---------------+--------+
+| Almost Famous                      |            95 |      5 |
+| Godfather                          |            87 |      5 |
+| Gladiator                          |            73 |      5 |
+| Star Wars: Episode IV - A New Hope |            69 |      5 |
+| Shawshank Redemption               |            67 |      5 |
+| Village of the Damned              |             1 |      1 |
+| Fatal Attraction                   |             1 |      1 |
+| Gypsy                              |             1 |      1 |
+| Licence to Kill                    |             1 |      1 |
+| Surviving the Game                 |             1 |      1 |
++------------------------------------+---------------+--------+
+10 rows in set (0.86 sec)

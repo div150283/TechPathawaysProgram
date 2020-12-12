@@ -1,0 +1,80 @@
+1.Movie Table
+CREATE TABLE movie (
+    movie_id int,
+    movie_title varchar(50),
+    movie_year varchar(255),
+    movie_genere varchar(100)
+);
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| movie_id     | int(11)      | NO   | PRI | NULL    |       |
+| movie_title  | varchar(50)  | YES  |     | NULL    |       |
+| movie_year   | int(11)      | YES  |     | NULL    |       |
+| movie_genere | varchar(100) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+2. Ratings Table
+
+CREATE TABLE ratings (
+  user_id int NOT NULL,
+  movie_id int NOT NULL,
+  rating int DEFAULT NULL,
+  time_stamp int DEFAULT NULL,
+  PRIMARY KEY (user_id,movie_id),
+  KEY movie_id (movie_id),
+  CONSTRAINT ratings_ibfk_1 FOREIGN KEY (user_id) REFERENCES user (user_id),
+  CONSTRAINT ratings_ibfk_2 FOREIGN KEY (movie_id) REFERENCES movie (movie_id)
+)
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| user_id    | int(11) | NO   | PRI | NULL    |       |
+| movie_id   | int(11) | NO   | PRI | NULL    |       |
+| rating     | int(11) | YES  |     | NULL    |       |
+| time_stamp | int(11) | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+
+3. User Table 
+ 
+ CREATE TABLE user (
+  user_id int NOT NULL,
+  gender varchar(1) DEFAULT NULL,
+  age int DEFAULT NULL,
+  occupation int DEFAULT NULL,
+  zipcode int DEFAULT NULL,
+  PRIMARY KEY (user_id)
+) 
+
++------------+------------+------+-----+---------+-------+
+| Field      | Type       | Null | Key | Default | Extra |
++------------+------------+------+-----+---------+-------+
+| user_id    | int(11)    | NO   | PRI | NULL    |       |
+| gender     | varchar(1) | YES  |     | NULL    |       |
+| age        | int(11)    | YES  |     | NULL    |       |
+| occupation | int(11)    | YES  |     | NULL    |       |
+| zipcode    | int(11)    | YES  |     | NULL    |       |
++------------+------------+------+-----+---------+-------+
+
+4. Movie Genere Table 
+CREATE TABLE tb_movie_genere (
+  movie_id int DEFAULT NULL,
+  movie_genere varchar(100) DEFAULT NULL
+) 
+
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| movie_id     | int(11)      | YES  |     | NULL    |       |
+| movie_genere | varchar(100) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+5. Occupation Table 
+CREATE TABLE occupation(occupation_id INT not null, PRIMARY KEY(occupation_id),occupation_name VARCHAR(35) NOT NULL);
+
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| occupation_id   | int(11)     | NO   | PRI | NULL    |       |
+| occupation_name | varchar(35) | NO   |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
