@@ -4,9 +4,9 @@
 
 2. Imported data from movie.csv, occupation.csv,users.csv,ratings.csv,movie_genere.csv stored in storage bucket and then queried the data.
 
-![image-20201219140812931](C:\Users\SunDivya\AppData\Roaming\Typora\typora-user-images\image-20201219140812931.png)
 
-![image-20201219144134293](C:/Users/SunDivya/AppData/Roaming/Typora/typora-user-images/image-20201219144134293.png)
+
+![](C:%5CUsers%5CSunDivya%5CDocuments%5CimageForAssignment%5C2_2.png)
 
 
 
@@ -31,15 +31,15 @@
 
    
 
+![](C:%5CUsers%5CSunDivya%5CDocuments%5CimageForAssignment%5C3_1.png)
 
 
-![image-20201219153626217](C:\Users\SunDivya\AppData\Roaming\Typora\typora-user-images\image-20201219153626217.png)
 
 
 
-5. Public dataset in Bigquery-Imported data from public dataset new_york_taxi_trips  and ran following query:
+4. Public dataset in Bigquery-Imported data from public dataset new_york_taxi_trips  and ran following query:
 
 **How many trips did Yellow taxis take each month in 2015?**
 This query returns monthly trip totals for all Yellow taxis in 2015[]()
 
-![image-20201219155832231](C:\Users\SunDivya\AppData\Roaming\Typora\typora-user-images\image-20201219155832231.png)
+![](C:%5CUsers%5CSunDivya%5CDocuments%5CimageForAssignment%5C4_1.png)
