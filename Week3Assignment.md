@@ -1,4 +1,6 @@
-1.Read a csv file from gcp cloud storage and view the contents using python
+<b>Assignment 1:</b>
+
+Read a csv file from gcp cloud storage and view the contents using python
 
 Here I have read the csv file using 2 methods:
 
@@ -16,3 +18,7 @@ Output Using Pandas
 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/readingcsv_panda_output.png)
 
+<u>References used for this assignment:</u>
+
+https://www.youtube.com/watch?v=ED5vHa3fE1Q&t=71s
+https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/read-write-to-cloud-storage#specifying_the_cloud_storage_bucket
