@@ -36,5 +36,6 @@ Parquet file output displayed in 3 different ways
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframe_byLineNumber.png)
    
 <b>References used for Assignment2:</b>
+ 
  https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_parquet.html
  https://www.w3schools.com/python/pandas_dataframes.asp
