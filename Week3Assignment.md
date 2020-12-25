@@ -17,6 +17,7 @@ Output Using Pandas
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/readingcsv_panda_output.png)
 
 <b>References used for Assignment1:</b>
+
 https://www.youtube.com/watch?v=ED5vHa3fE1Q&t=71s
 https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/read-write-to-cloud-storage#specifying_the_cloud_storage_bucket
 
