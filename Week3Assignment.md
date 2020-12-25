@@ -24,7 +24,12 @@ https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
 
 <b>Assignment 2:</b>
 <b>1.</b> Uploaded the parquet file to cloud and read the file using the python code.
+
    Parquet file output displayed in different ways
+    
    <b>(a)</b> Output by printing the dataframe directly
+    
    <b>(b)</b> Output by printing the dataframe using to_string() function 
+    
    <b>(c)</b> Output by printing the dataframe using location function in which i had specified labels: lineNoFrom and lineNoTo and just printed few lines i want to see.
+    
