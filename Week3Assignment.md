@@ -23,13 +23,13 @@ https://www.youtube.com/watch?v=ED5vHa3fE1Q&t=71s
 https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/read-write-to-cloud-storage#specifying_the_cloud_storage_bucket
 
 <b>Assignment 2:</b>
-<b>1.</b> Uploaded the parquet file to cloud and read the file using the python code.
-
-   Parquet file output displayed in different ways
+ 
+   Uploaded the parquet file to cloud storage using upload function and read the file using the python code.
+   Parquet file output displayed in 3 different ways
     
    <b>(a)</b> Output by printing the dataframe directly
     
    <b>(b)</b> Output by printing the dataframe using to_string() function 
     
-   <b>(c)</b> Output by printing the dataframe using location function in which i had specified labels: lineNoFrom and lineNoTo and just printed few lines i want to see.
+   <b>(c)</b> Output by printing the dataframe using Location function in which i had specified labels: lineNoFrom and lineNoTo and just printed few lines i want to see.
     
