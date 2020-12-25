@@ -22,8 +22,8 @@ https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
 
 <b>Assignment 2:</b>
  
- Uploaded the parquet file to cloud storage using upload function and read the file using the python code.
- Parquet file output displayed in 3 different ways
+  Uploaded the parquet file to cloud storage using upload files option in google cloud storage browser and read the file using the python code.
+  Parquet file output displayed in 3 different ways
     
   <b>(a)</b> Output by printing the dataframe directly
   
@@ -32,7 +32,7 @@ https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
   <b>(b)</b> Output by printing the dataframe using to_string() function 
   ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframePrint_ToString.png)
     
-  <b>(c)</b> Output by printing the dataframe using Location function in which i had specified labels: lineNoFrom and lineNoTo and just printed few lines i want to see.
+  <b>(c)</b> Output by printing the dataframe using Location function in which I had specified labels: lineNoFrom and lineNoTo and just printed few lines I want to see.
   ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframe_byLineNumber.png)
    
     
