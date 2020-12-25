@@ -28,12 +28,13 @@ https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
    Parquet file output displayed in 3 different ways
     
    <b>(a)</b> Output by printing the dataframe directly
-  https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframePrint.png
+  
+  ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframePrint.png)
     
    <b>(b)</b> Output by printing the dataframe using to_string() function 
-  https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframePrint_ToString.png
+   ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframePrint_ToString.png)
     
    <b>(c)</b> Output by printing the dataframe using Location function in which i had specified labels: lineNoFrom and lineNoTo and just printed few lines i want to see.
-   https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframe_byLineNumber.png
+    ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/parque_dataframe_byLineNumber.png)
    
     
