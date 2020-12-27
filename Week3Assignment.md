@@ -40,3 +40,11 @@ Parquet file output displayed in 3 different ways
  
  https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_parquet.html
  https://www.w3schools.com/python/pandas_dataframes.asp
+ 
+<b>Assignment 3:</b>
+ 
+Run ELT processes to load data from source into data lake. And run some queries on the data on databricks using spark.
+
+The first part in this assignment is setting up a databricks cluster.The cluster type is Single Node as shown below
+
+ 
