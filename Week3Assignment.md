@@ -50,11 +50,17 @@ The first part in this assignment is setting up a databricks cluster.The cluster
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_vminstances.png)
  
 <b>1)</b> Get the data of Movies from Google Cloud storage. Loaded data into datalake and showing the data. As the file was not having the headers so added the header names dynamically.
+
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_addHeaderToCsv.png)
 <b>2)</b> Written a spark sql query to retrieve the count of total rows(total movies) in a dataframe.
+
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_countQuery.png)
 <b>3)</b> Written a spark sql query to select moviename and movieyear from a dataframe(All records cannot come into image there are so many records)
+
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_selectQuery.png)
 <b>4)</b> Written a spark sql query to get count of movies per year from the dataframe sorted by movie year
-![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_moviesPerYear.png)
 
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_moviesPerYear.png)
+<b>5)</b> Created a view from dataframe and then queried on the movielens view to show movies which were released in 1995
+
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_queryMovieLensView.png)
