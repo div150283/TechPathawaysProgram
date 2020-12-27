@@ -64,3 +64,13 @@ The first part in this assignment is setting up a databricks cluster.The cluster
 <b>5)</b> Created a view from dataframe and then queried on the movielens view to show movies which were released in 1995
 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_queryMovieLensView.png)
+
+<b>Assignment 4:</b>
+
+4) Bonus: Do some visualizations to show a simple analysis on the data.
+I have created a dataframe and then created bar graph,line graph,pie chart from the selected data(Number of movies per year)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_barGraph.png)
+
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_lineGraph.png)
+
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_PieChart.png)
