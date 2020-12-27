@@ -51,4 +51,7 @@ The first part in this assignment is setting up a databricks cluster.The cluster
  
 <b>1)</b> Get the data of Movies from Google Cloud storage. Loaded data into datalake and showing the data. As the file was not having the headers so added the header names dynamically.
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_addHeaderToCsv.png)
-
+<b>2)</b> Written a spark sql query to retrieve the count of total rows(total movies) in a dataframe.
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_countQuery.png)
+<b>2)</b> Written a spark sql query to select moviename and movieyear from a dataframe(All records cannot come into image there are so many records)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_selectQuery.png)
