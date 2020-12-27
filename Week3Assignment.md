@@ -46,5 +46,6 @@ Parquet file output displayed in 3 different ways
 Run ELT processes to load data from source into data lake. And run some queries on the data on databricks using spark.
 
 The first part in this assignment is setting up a databricks cluster.The cluster type is Single Node as shown below
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_setup.png)
 
  
