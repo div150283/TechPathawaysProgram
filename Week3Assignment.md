@@ -53,5 +53,8 @@ The first part in this assignment is setting up a databricks cluster.The cluster
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_addHeaderToCsv.png)
 <b>2)</b> Written a spark sql query to retrieve the count of total rows(total movies) in a dataframe.
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_countQuery.png)
-<b>2)</b> Written a spark sql query to select moviename and movieyear from a dataframe(All records cannot come into image there are so many records)
+<b>3)</b> Written a spark sql query to select moviename and movieyear from a dataframe(All records cannot come into image there are so many records)
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_selectQuery.png)
+<b>4)</b> Written a spark sql query to get count of movies per year from the dataframe sorted by movie year
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_moviesPerYear.png)
+
