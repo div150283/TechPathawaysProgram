@@ -74,3 +74,11 @@ I have created a dataframe and then created bar graph,line graph,pie chart from 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_lineGraph.png)
 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_dataframe_PieChart.png)
+
+References used for Assignment 3 and 4:
+https://datascience-school.com/blog/practical-apache-spark-in-10-minutes-part-3-dataframes-and-sql/
+https://www.datasciencemadesimple.com/get-number-of-rows-and-number-of-columns-of-dataframe-in-pyspark/
+https://problemsolvingwithpython.com/06-Plotting-with-Matplotlib/06.06-Bar-Charts-and-Pie-Charts/
+https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe
+https://sparkbyexamples.com/pyspark/convert-pyspark-dataframe-to-pandas/
+
