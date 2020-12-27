@@ -49,3 +49,6 @@ The first part in this assignment is setting up a databricks cluster.The cluster
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_setup.png)
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_vminstances.png)
  
+<b>1)</b> Get the data of Movies from Google Cloud storage. Loaded data into datalake and showing the data. As the file was not having the headers so added the header names dynamically.
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week3Assignment/Images/dataproc_addHeaderToCsv.png)
+
