@@ -5,5 +5,6 @@ Part 4. Write a python script to read a csv file and write it back to cloud stor
 
 <b>Part 4: </b>
 Read the CSV file from Google Cloud and converted to Parquet file
-[]!()
-
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week4Assignment/Images/ConvertCsv2Parque.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week4Assignment/Images/buckcetFolderCreated.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week4Assignment/Images/bucketParquetFileCreated.png)
