@@ -7,7 +7,7 @@ First I have read the csv file from google cloud shell line by line and then upl
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/loadingdataindatastore.png)
 
 Data Fetched from datastore using python script is as follows:
-![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/loadingdataindatastore.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/fetchingData.png)
 
 
 
