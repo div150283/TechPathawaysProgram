@@ -14,4 +14,28 @@ Data Fetched from datastore using python script is as follows:
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/removingNullandDuplicates_createParquet.png)
 
 3. Write another python script to read from the parquet or orc file and create a descriptive summary. Compute sum of a numeric column (for instance salary). You can take it a step further by grouping it on a specific column (eg: Title) and find the highest salaried Title.
+
+First I created a dataproc cluster with below configuration :
+CLUSTER_NAME="clusterspark" 
+gcloud beta dataproc clusters create ${CLUSTER_NAME} \
+--region us-central1 \
+--zone us-central1-a  \
+--master-machine-type n1-standard-1 \
+--master-boot-disk-size 500 \
+--num-workers 2  \
+--worker-machine-type n1-standard-1  \
+--worker-boot-disk-size 500  \
+--image-version 1.3-debian10  \
+--project the-webbing-300813 \
+--optional-components=ANACONDA,JUPYTER  \
+--enable-component-gateway \
+--metadata 'PIP_PACKAGES=google-cloud-bigquery google-cloud-storage'  \
+--metadata gcs-connector-url=gs://path/to/custom/gcs/connector.jar  \
+--metadata bigquery-connector-url=gs://path/to/custom/hadoop/bigquery/connector.jar  \
+--metadata spark-bigquery-connector-url=gs://path/to/custom/spark/bigquery/connector.jar  \
+--initialization-actions gs://goog-dataproc-initialization-actions-us-central1/python/pip-install.sh \
+--properties "spark:spark.jars=gs://spark-lib/bigquery/spark-bigquery-latest.jar"
+
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/creatingdataproccluster.png)
+
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
