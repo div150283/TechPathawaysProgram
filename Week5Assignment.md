@@ -41,4 +41,19 @@ The parquet file is copied from google cloud shell to google cloud storage bucke
 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/greentaxiparquet.png)
 
+The python code for reading a parquet file and then generating the descriptive summary of the dataframe:
+
+import pyspark
+import sys
+from pyspark.sql import SparkSession
+spark = SparkSession.builder \
+.appName("Green Taxi Data") \
+.getOrCreate()
+greentaxi_df = spark.read.parquet("gs://nycgreentaxibucket/greentaxi.parquet")
+#Descriptive summary
+greentaxi_df.describe().show()
+
+Output is as mentioned:
+
+
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
