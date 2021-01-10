@@ -37,5 +37,7 @@ gcloud beta dataproc clusters create ${CLUSTER_NAME} \
 --properties "spark:spark.jars=gs://spark-lib/bigquery/spark-bigquery-latest.jar"
 
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/creatingdataproccluster.png)
+The parquet file is copied from google cloud shell to google cloud storage bucket as mentioned in the screenshot:
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/cgreentaxiparquet.png)
 
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
