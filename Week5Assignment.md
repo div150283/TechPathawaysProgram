@@ -56,4 +56,21 @@ greentaxi_df.describe().show()
 Output is as mentioned:
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/outputDescriptiveSummary.png)
 
+The code for descriptive summary and tranformations on a spark dataframe
+import pyspark
+import sys
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder \
+.appName("Green Taxi Data") \
+.getOrCreate()
+greentaxi_df = spark.read.parquet("gs://nycgreentaxibucket/greentaxi.parquet")
+#Descriptive summary
+#greentaxi_df.describe().show()
+#greentaxi_df.agg({'Passenger_count': 'sum'}).show()
+print(greentaxi_df.count())
+
+#Number of trips grouped by vendor id and passenger count
+greentaxi_df.groupBy('VendorID','Passenger_count').count().orderBy(greentaxi_df.VendorID.asc()).show()
+
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
