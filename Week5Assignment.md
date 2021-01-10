@@ -54,6 +54,6 @@ greentaxi_df = spark.read.parquet("gs://nycgreentaxibucket/greentaxi.parquet")
 greentaxi_df.describe().show()
 
 Output is as mentioned:
-
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/outputDescriptiveSummary.png)
 
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
