@@ -72,5 +72,7 @@ print(greentaxi_df.count())
 
 #Number of trips grouped by vendor id and passenger count
 greentaxi_df.groupBy('VendorID','Passenger_count').count().orderBy(greentaxi_df.VendorID.asc()).show()
+The output and code is as follows:
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/aggregatefunctions.png)
 
 4. Integrate the above jobs into a data pipeline, the job flow is important so step 2 should precede step 3 in the data pipeline https://cloud.google.com/solutions/building-production-ready-data-pipelines-using-dataflow-overview
