@@ -29,3 +29,4 @@ Created a recipe for movie duration greater than 60 minutes and then ordered the
 1.Created a new bucket in cloud storage bucket and uploaded movie_lens csv file in the bucket:
 [](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/dataprep_moviebucket.png)
 2.Imported the data from bucket into google cloud dataprep by import button
+[](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/importeddataset.png)
