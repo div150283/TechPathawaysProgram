@@ -27,6 +27,8 @@ Dataprep is very good tool for data cleaning and tranformations. I used my movie
 Created a recipe for movie duration greater than 60 minutes and then ordered the results by country and then removed duplicate values from the data and also removed missing values and null values from two columns usa_gross_income and worldwide_gross_income.The screenhsots are attached as follows:
 
 1.Created a new bucket in cloud storage bucket and uploaded movie_lens csv file in the bucket:
-[](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/dataprep_moviebucket.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/dataprep_moviebucket.png)
 2.Imported the data from bucket into google cloud dataprep by import button
-[](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/importeddataset.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/importeddataset.png)
+3.Created a flow in dataprep and then applied recipe on it with transformations.The screenshots are as follows:
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/importeddataset.png)
