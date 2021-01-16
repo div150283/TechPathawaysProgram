@@ -22,3 +22,6 @@ A short write-up on  data quality issues that you have encountered in real world
   
   6.Completeness : Does it fulfill your expectations of what’s comprehensive?  
    Data should be complete for every booking and all mandatory fields should be captured in the data.While issuing manual ticket, we may forgot to mention destination/date of travel or some other mandatory fields.Whereas in software these fields can be made mandatory so that all required information is captured.
+
+Dataprep is very good tool for data cleaning and tranformations. I used my movielens dataset and then imported my dataset from google cloud storage in the dataprep flow and then created recipe on the data.The recipe logic is as follows:
+Created a recipe for movie duration greater than 60 minutes and then ordered the results by country and then removed duplicate values from the data and also removed missing values and null values from two columns usa_gross_income and worldwide_gross_income.The screenhsots are attached as follows:
