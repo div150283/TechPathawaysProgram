@@ -40,3 +40,5 @@ Created a recipe for movie duration greater than 60 minutes and then ordered the
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/transformeddatamovie.png)
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/datapreprecipe.png)
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/transformedmoviedatawithrecipe.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/job_output.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/job_bucketoutput.png)
