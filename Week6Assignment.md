@@ -31,4 +31,4 @@ Created a recipe for movie duration greater than 60 minutes and then ordered the
 2.Imported the data from bucket into google cloud dataprep by import button
 ![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/importeddataset.png)
 3.Created a flow in dataprep and then applied recipe on it with transformations.The screenshots are as follows:
-![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week%205%20Assignment/Images/importeddataset.png)
+![](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/Movie_flow.png)
