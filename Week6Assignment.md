@@ -25,3 +25,7 @@ A short write-up on  data quality issues that you have encountered in real world
 
 Dataprep is very good tool for data cleaning and tranformations. I used my movielens dataset and then imported my dataset from google cloud storage in the dataprep flow and then created recipe on the data.The recipe logic is as follows:
 Created a recipe for movie duration greater than 60 minutes and then ordered the results by country and then removed duplicate values from the data and also removed missing values and null values from two columns usa_gross_income and worldwide_gross_income.The screenhsots are attached as follows:
+
+1.Created a new bucket in cloud storage bucket and uploaded movie_lens csv file in the bucket:
+[](https://github.com/div150283/TechPathawaysProgramModule1/blob/main/Week6Assignment/Images/dataprep_moviebucket.png)
+2.Imported the data from bucket into google cloud dataprep by import button
